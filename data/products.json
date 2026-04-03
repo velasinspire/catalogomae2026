@@ -1,0 +1,90 @@
+[
+  {
+    "id": 1,
+    "name": "Mini Nature sem tampa",
+    "detail": "100g · Pavio de madeira · As flores e tonalidades variam de uma vela para outra.",
+    "priceRetail": 75.00,
+    "priceWholesale": 39.40,
+    "wholesaleMin": 10,
+    "image": "mini-nature-sem-tampa.jpeg",
+    "isKit": false,
+    "tag": null
+  },
+  {
+    "id": 2,
+    "name": "Home Spray",
+    "detail": "60ml · Fragrância floral suave e acolhedora, perfeita para ambientes.",
+    "priceRetail": 49.90,
+    "priceWholesale": 32.60,
+    "wholesaleMin": 10,
+    "image": "",
+    "isKit": false,
+    "tag": null
+  },
+  {
+    "id": 3,
+    "name": "Copinho sem tampa",
+    "detail": "60g · Pavio de algodão · Sem flores no topo · Acabamento delicado e elegante.",
+    "priceRetail": 35.00,
+    "priceWholesale": 21.20,
+    "wholesaleMin": 10,
+    "image": "copinho-sem-tampa.jpeg",
+    "isKit": false,
+    "tag": null
+  },
+  {
+    "id": 4,
+    "name": "Elixir Corporal",
+    "detail": "50ml · Formulação entre o body splash e água de colônia · Perfumação duradoura na pele.",
+    "priceRetail": 59.90,
+    "priceWholesale": 42.50,
+    "wholesaleMin": 10,
+    "image": "elixir-corporal.jpeg",
+    "isKit": false,
+    "tag": "✨ Novidade"
+  },
+  {
+    "id": 5,
+    "name": "Kit Vela + Perfume",
+    "detail": "Vela mini nature + Elixir corporal + Caixa com arabesco alto relevo e fita.",
+    "priceRetail": 149.90,
+    "priceWholesale": 99.90,
+    "wholesaleMin": 10,
+    "image": "kit-vela-perfume.jpeg",
+    "isKit": true,
+    "tag": "🎁 Kit"
+  },
+  {
+    "id": 6,
+    "name": "Kit Vela + Home Spray",
+    "detail": "Vela mini nature + Home spray + Caixa com arabesco alto relevo e fita.",
+    "priceRetail": 139.90,
+    "priceWholesale": 89.90,
+    "wholesaleMin": 10,
+    "image": "kit-vela-home-spray.jpeg",
+    "isKit": true,
+    "tag": "🎁 Kit"
+  },
+  {
+    "id": 7,
+    "name": "Mini Home Spray",
+    "detail": "10ml · Tamanho de bolsa · Perfeito como mimo ou lembrança especial.",
+    "priceRetail": 18.00,
+    "priceWholesale": 16.50,
+    "wholesaleMin": 10,
+    "image": "mini-home-spray.jpeg",
+    "isKit": false,
+    "tag": null
+  },
+  {
+    "id": 8,
+    "name": "Cartão com Vela Margarida",
+    "detail": "20g · Cartão artesanal com vela em formato de margarida. Presente perfeito e delicado.",
+    "priceRetail": 15.00,
+    "priceWholesale": 9.90,
+    "wholesaleMin": 10,
+    "image": "cartao-vela-margarida.jpeg",
+    "isKit": false,
+    "tag": null
+  }
+]
