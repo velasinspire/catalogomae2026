@@ -801,22 +801,45 @@ img { max-width: 100%; display: block; }
 .cart-items::-webkit-scrollbar-track { background: transparent; }
 .cart-items::-webkit-scrollbar-thumb { background: var(--cream-dark); border-radius: 4px; }
 
-/* ——— RESPONSIVE ——— */
+
+
+/* ——— RESPONSIVE MOBILE (substitui as regras anteriores) ——— */
 @media (max-width: 640px) {
   .hero { padding: 50px 20px 40px; min-height: auto; }
   .hero-title { font-size: 44px; }
-  .products-grid { grid-template-columns: 1fr 1fr; gap: 14px; }
+  .section-title { font-size: 30px; }
   .catalog-section { padding: 36px 14px 80px; }
 
-  .card-body { padding: 14px; gap: 8px; }
-  .card-name { font-size: 18px; }
-  .price-retail { font-size: 18px; }
+  /* 1 coluna no mobile — card na horizontal para melhor uso do espaço */
+  .products-grid { grid-template-columns: 1fr !important; gap: 16px; }
 
-  .section-title { font-size: 30px; }
+  .product-card {
+    flex-direction: row;
+    min-height: 160px;
+  }
+
+  .card-image-wrap {
+    width: 140px;
+    min-width: 140px;
+    aspect-ratio: auto;
+    border-radius: var(--radius) 0 0 var(--radius);
+  }
+
+  .card-body {
+    padding: 14px;
+    gap: 8px;
+    flex: 1;
+    min-width: 0;
+  }
+
+  .card-name { font-size: 16px; }
+  .price-retail { font-size: 17px; }
+  .card-detail { font-size: 12px; }
+
+  /* Controles empilhados verticalmente */
+  .card-actions { flex-direction: column; align-items: stretch; gap: 8px; }
+  .qty-control { justify-content: center; }
+  .btn-add { width: 100%; justify-content: center; }
 
   .btn-whatsapp-header span { display: none; }
-}
-
-@media (max-width: 400px) {
-  .products-grid { grid-template-columns: 1fr; }
 }
