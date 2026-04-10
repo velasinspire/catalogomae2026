@@ -2,15 +2,33 @@
 // products.js — Renderização dos cards de produto
 // ================================================
 
-// products e IMAGE_BASE_PATH são definidos em main.js após o fetch
-
-// ——— QUANTIDADE SELECIONADA NO CARD (antes de adicionar) ———
-// cardQtys é declarado em main.js como variável global
-
+// ——— ALTERAR QUANTIDADE (Via botões) ———
 function changeCardQty(id, delta) {
+  // Garante que o valor atual exista, aplica o delta e mantém o mínimo de 1
   cardQtys[id] = Math.max(1, (cardQtys[id] || 1) + delta);
-  const el = document.getElementById(`card-qty-${id}`);
-  if (el) el.textContent = cardQtys[id];
+  
+  const input = document.getElementById(`card-qty-${id}`);
+  if (input) {
+    input.value = cardQtys[id];
+  }
+}
+
+// ——— ATUALIZAR QUANTIDADE (Via digitação) ———
+function updateCardQtyManual(id, value) {
+  let qty = parseInt(value);
+  
+  // Se não for um número ou menor que 1, define como 1 (ou deixa vazio enquanto digita)
+  if (isNaN(qty) || qty < 1) {
+    qty = 1;
+  }
+  
+  cardQtys[id] = qty;
+  
+  // Sincroniza o valor do input (caso o usuário digite 0 ou letras)
+  const input = document.getElementById(`card-qty-${id}`);
+  if (input && value !== "") {
+    input.value = qty;
+  }
 }
 
 // ——— RENDERIZAR GRID DE PRODUTOS ———
@@ -43,9 +61,15 @@ function renderProducts() {
         </div>
         <div class="card-actions">
           <div class="qty-control">
-            <button class="qty-btn" onclick="changeCardQty(${p.id}, -1)" aria-label="Diminuir">−</button>
-            <span class="qty-value" id="card-qty-${p.id}">1</span>
-            <button class="qty-btn" onclick="changeCardQty(${p.id}, 1)" aria-label="Aumentar">+</button>
+            <button class="qty-btn" onclick="changeCardQty(${p.id}, -1)">−</button>
+            <input 
+              type="number" 
+              class="qty-input" 
+              id="card-qty-${p.id}" 
+              value="${cardQtys[p.id] || 1}" 
+              oninput="updateCardQtyManual(${p.id}, this.value)"
+            />
+            <button class="qty-btn" onclick="changeCardQty(${p.id}, 1)">+</button>
           </div>
           <button class="btn-add" id="btn-add-${p.id}" onclick="addToCart(${p.id})">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="16" height="16">
